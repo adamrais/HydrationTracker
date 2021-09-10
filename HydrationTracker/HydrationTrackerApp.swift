@@ -9,11 +9,9 @@ import SwiftUI
 
 @main
 struct HydrationTrackerApp: App {
-    @StateObject var vmEnv = hydrationViewModel()
     var body: some Scene {
         WindowGroup {
-            MainView()
-                .environmentObject(vmEnv)
+            ContentView()
         }
     }
 }

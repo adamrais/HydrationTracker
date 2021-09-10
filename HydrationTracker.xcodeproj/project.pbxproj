@@ -11,12 +11,6 @@
 		E5096C0326E90D7F00D7D2D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C0226E90D7F00D7D2D8 /* ContentView.swift */; };
 		E5096C0526E90D8100D7D2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5096C0426E90D8100D7D2D8 /* Assets.xcassets */; };
 		E5096C0826E90D8100D7D2D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5096C0726E90D8100D7D2D8 /* Preview Assets.xcassets */; };
-		E5096C1726E94A2D00D7D2D8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C1626E94A2C00D7D2D8 /* MainView.swift */; };
-		E5096C1926E9B50900D7D2D8 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C1826E9B50900D7D2D8 /* CircularProgressBarView.swift */; };
-		E5096C1B26EA624900D7D2D8 /* hydrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C1A26EA624900D7D2D8 /* hydrationModel.swift */; };
-		E5096C1D26EA625900D7D2D8 /* HydrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C1C26EA625900D7D2D8 /* HydrationViewModel.swift */; };
-		E5096C1F26EA664200D7D2D8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C1E26EA664200D7D2D8 /* SettingsView.swift */; };
-		E5096C2126EA67AA00D7D2D8 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C2026EA67AA00D7D2D8 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +20,6 @@
 		E5096C0426E90D8100D7D2D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5096C0726E90D8100D7D2D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E5096C0926E90D8100D7D2D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5096C1626E94A2C00D7D2D8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		E5096C1826E9B50900D7D2D8 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
-		E5096C1A26EA624900D7D2D8 /* hydrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hydrationModel.swift; sourceTree = "<group>"; };
-		E5096C1C26EA625900D7D2D8 /* HydrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationViewModel.swift; sourceTree = "<group>"; };
-		E5096C1E26EA664200D7D2D8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		E5096C2026EA67AA00D7D2D8 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +52,6 @@
 		E5096BFF26E90D7F00D7D2D8 /* HydrationTracker */ = {
 			isa = PBXGroup;
 			children = (
-				E5096C1126E90DB500D7D2D8 /* ViewModel */,
-				E5096C1026E90DB000D7D2D8 /* Model */,
-				E5096C0F26E90DAB00D7D2D8 /* Views */,
 				E5096C0026E90D7F00D7D2D8 /* HydrationTrackerApp.swift */,
 				E5096C0226E90D7F00D7D2D8 /* ContentView.swift */,
 				E5096C0426E90D8100D7D2D8 /* Assets.xcassets */,
@@ -82,65 +67,6 @@
 				E5096C0726E90D8100D7D2D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E5096C0F26E90DAB00D7D2D8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E5096C1526E90E1600D7D2D8 /* HydrationView */,
-				E5096C1426E90DD500D7D2D8 /* InfoView */,
-				E5096C1326E90DCC00D7D2D8 /* SettingsView */,
-				E5096C1226E90DBC00D7D2D8 /* MainView */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		E5096C1026E90DB000D7D2D8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				E5096C1A26EA624900D7D2D8 /* hydrationModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E5096C1126E90DB500D7D2D8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E5096C1C26EA625900D7D2D8 /* HydrationViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E5096C1226E90DBC00D7D2D8 /* MainView */ = {
-			isa = PBXGroup;
-			children = (
-				E5096C1626E94A2C00D7D2D8 /* MainView.swift */,
-				E5096C1826E9B50900D7D2D8 /* CircularProgressBarView.swift */,
-			);
-			path = MainView;
-			sourceTree = "<group>";
-		};
-		E5096C1326E90DCC00D7D2D8 /* SettingsView */ = {
-			isa = PBXGroup;
-			children = (
-				E5096C1E26EA664200D7D2D8 /* SettingsView.swift */,
-			);
-			path = SettingsView;
-			sourceTree = "<group>";
-		};
-		E5096C1426E90DD500D7D2D8 /* InfoView */ = {
-			isa = PBXGroup;
-			children = (
-				E5096C2026EA67AA00D7D2D8 /* InfoView.swift */,
-			);
-			path = InfoView;
-			sourceTree = "<group>";
-		};
-		E5096C1526E90E1600D7D2D8 /* HydrationView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HydrationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,14 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5096C2126EA67AA00D7D2D8 /* InfoView.swift in Sources */,
-				E5096C1F26EA664200D7D2D8 /* SettingsView.swift in Sources */,
 				E5096C0326E90D7F00D7D2D8 /* ContentView.swift in Sources */,
-				E5096C1B26EA624900D7D2D8 /* hydrationModel.swift in Sources */,
-				E5096C1726E94A2D00D7D2D8 /* MainView.swift in Sources */,
-				E5096C1926E9B50900D7D2D8 /* CircularProgressBarView.swift in Sources */,
 				E5096C0126E90D7F00D7D2D8 /* HydrationTrackerApp.swift in Sources */,
-				E5096C1D26EA625900D7D2D8 /* HydrationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
