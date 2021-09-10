@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    let colors: [Color] = [.red, .green, .blue, .yellow]
+    @EnvironmentObject var vmEnv: hydrationViewModel
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            ForEach(colors, id: \.self) { drop in
+                Image(systemName: "drop.fill")
+                    .foregroundColor(drop)
+                    .font(.title)
+            }
+            MainView()
+        }
+        
+            
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(hydrationViewModel())
     }
 }
