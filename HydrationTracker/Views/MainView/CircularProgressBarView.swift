@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CircularProgressBarView: View {
     @Binding var progress: Float
-    @EnvironmentObject var vmEnv: hydrationViewModel
     var body: some View {
         ZStack {
             Circle()
@@ -38,6 +37,5 @@ struct CircularProgressBarView: View {
 struct CircularProgressBarView_Previews: PreviewProvider {
     static var previews: some View {
         CircularProgressBarView(progress: .constant(0.5))
-            .environmentObject(hydrationViewModel())
     }
 }

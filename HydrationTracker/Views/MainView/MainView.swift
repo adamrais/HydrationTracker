@@ -12,7 +12,7 @@ struct MainView: View {
     @State var progressValueMl: Int = 0
     @State private var showSettings = false
     @State private var showInfo = false
-    @State private var showIntakeView = false
+    @State private var showHydrationView = false
     @EnvironmentObject var vmEnv: hydrationViewModel
     var body: some View {
         ZStack {
@@ -21,44 +21,65 @@ struct MainView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
-                Text(Date(), style: .date)
-                    .font(.title).bold()
-                Text("Here is your fluid intake")
-                CircularProgressBarView(progress: $progressValue)
-                    .frame(width: 200.0, height: 200.0)
-                    .padding(40.0)
-                Text("\(min(progressValueMl,Int(vmEnv.dailyGoal)!)) mL /" + " \(vmEnv.dailyGoal) mL")
-                Text(vmEnv.dailyGoal)
-                List {
-                    
-                }
+                VStack {
+                    Text(Date(), style: .date)
+                        .font(.largeTitle)
+                        .bold()
+                    Text("Here is your fluid intake")
+                    CircularProgressBarView(progress: $vmEnv.progress)
+                        .frame(width: 200.0, height: 200.0)
+                        .padding(40.0)
+                    Text("\(min(vmEnv.progressML,Double(Int(vmEnv.dailyGoal)!))) mL /" + " \(vmEnv.dailyGoal) mL")
+                }.padding(.vertical, 16.0)
+                hydrationList
                 HStack {
                     infoButton
                     Spacer()
                     intakeButton
                     Spacer()
                     settingsButton
-                }.padding()
+                }.padding().padding(.top, 0.0)
             }
         }.sheet(isPresented: $showSettings) {
             SettingsView(showModal: $showSettings)
-                .environmentObject(hydrationViewModel())
+                .environmentObject(vmEnv)
         }
         .sheet(isPresented: $showInfo) {
             InfoView(showModal: $showInfo)
-                .environmentObject(hydrationViewModel())
+                .environmentObject(vmEnv)
+        }
+        .sheet(isPresented: $showHydrationView) {
+            addHydrationView(showModal: $showHydrationView)
+                .environmentObject(vmEnv)
         }
     }
     
 // MARK: - Views
+    init() {
+       UITableView.appearance().separatorStyle = .none
+        UITableView.appearance().backgroundColor = UIColor(.yellow.opacity(0.1))
+    }
+    private var hydrationList: some View {
+        VStack {
+            if vmEnv.hydrationData.isEmpty {
+                VStack {
+                    Text("no data")
+                        .font(.largeTitle)
+                }.frame(width: 200, height: 120, alignment: .center).padding(.all, 78.0)
+            } else {
+                List {
+                    ForEach(vmEnv.hydrationData) { item in
+                        intakeListView(hydration: item)
+                    }.onDelete(perform: vmEnv.deleteDrink)
+                    .listRowBackground(Color.yellow.opacity(0.1))
+                }
+            }
+        }
+    }
     private var intakeButton: some View {
         Button(action: {
             // call hydration view
-            progressValue += 0.1
-            progressValueMl = Int(3700*progressValue)
-            print("hydration")
-            showIntakeView = true
-            vmEnv.dailyGoal = "2"
+            showHydrationView = true
         }, label: {
             HStack {
                 Text("Add intake")

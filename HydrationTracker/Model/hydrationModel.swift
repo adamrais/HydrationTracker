@@ -7,8 +7,15 @@
 
 import Foundation
 
-struct hydration: Identifiable {
+struct hydration: Identifiable, Decodable, Encodable {
     var id = UUID()
-    var comsumption: Int
-    var dateCreated: Date
+    var type: String
+    var consumption: Double
+    var date: Date
+    
+    init(type: String, consumption: Double, date: Date) {
+        self.type = type
+        self.consumption = consumption
+        self.date = date
+    }
 }

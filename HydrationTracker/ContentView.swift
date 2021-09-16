@@ -12,12 +12,9 @@ struct ContentView: View {
     @EnvironmentObject var vmEnv: hydrationViewModel
     var body: some View {
         VStack {
-            ForEach(colors, id: \.self) { drop in
-                Image(systemName: "drop.fill")
-                    .foregroundColor(drop)
-                    .font(.title)
-            }
-            MainView()
+            Image("Coin")
+                .resizable()
+                .frame(width: 40.0, height: 40.0)
         }
         
             

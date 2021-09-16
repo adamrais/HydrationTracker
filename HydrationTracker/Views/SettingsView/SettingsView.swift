@@ -51,10 +51,7 @@ struct SettingsView: View {
     
     private var saveButton: some View {
         Button(action: {
-            print("save hydration")
-            //vmEnv.dailyGoal = String(vmEnv.intakeRange[vmEnv.selectedIntakeRange])
-            vmEnv.dailyGoal = "2000"
-            print(vmEnv.dailyGoal)
+            vmEnv.dailyGoal = String(vmEnv.intakeRange[vmEnv.selectedIntakeRange])
             showModal.toggle()
         }, label: {
             HStack {

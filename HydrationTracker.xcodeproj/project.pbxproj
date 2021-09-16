@@ -17,6 +17,10 @@
 		E5096C1D26EA625900D7D2D8 /* HydrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C1C26EA625900D7D2D8 /* HydrationViewModel.swift */; };
 		E5096C1F26EA664200D7D2D8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C1E26EA664200D7D2D8 /* SettingsView.swift */; };
 		E5096C2126EA67AA00D7D2D8 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C2026EA67AA00D7D2D8 /* InfoView.swift */; };
+		E5096C4226EBCBC200D7D2D8 /* intakeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C4126EBCBC200D7D2D8 /* intakeListView.swift */; };
+		E5096C4426EBE61E00D7D2D8 /* addHydrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C4326EBE61E00D7D2D8 /* addHydrationView.swift */; };
+		E5096C4626EC019B00D7D2D8 /* segmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C4526EC019B00D7D2D8 /* segmentedControl.swift */; };
+		E5096C4826EC049800D7D2D8 /* WheelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5096C4726EC049800D7D2D8 /* WheelPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		E5096C1C26EA625900D7D2D8 /* HydrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationViewModel.swift; sourceTree = "<group>"; };
 		E5096C1E26EA664200D7D2D8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E5096C2026EA67AA00D7D2D8 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		E5096C4126EBCBC200D7D2D8 /* intakeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intakeListView.swift; sourceTree = "<group>"; };
+		E5096C4326EBE61E00D7D2D8 /* addHydrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHydrationView.swift; sourceTree = "<group>"; };
+		E5096C4526EC019B00D7D2D8 /* segmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentedControl.swift; sourceTree = "<group>"; };
+		E5096C4726EC049800D7D2D8 /* WheelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 			children = (
 				E5096C1626E94A2C00D7D2D8 /* MainView.swift */,
 				E5096C1826E9B50900D7D2D8 /* CircularProgressBarView.swift */,
+				E5096C4126EBCBC200D7D2D8 /* intakeListView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -139,6 +148,9 @@
 		E5096C1526E90E1600D7D2D8 /* HydrationView */ = {
 			isa = PBXGroup;
 			children = (
+				E5096C4326EBE61E00D7D2D8 /* addHydrationView.swift */,
+				E5096C4526EC019B00D7D2D8 /* segmentedControl.swift */,
+				E5096C4726EC049800D7D2D8 /* WheelPickerView.swift */,
 			);
 			path = HydrationView;
 			sourceTree = "<group>";
@@ -214,12 +226,16 @@
 			files = (
 				E5096C2126EA67AA00D7D2D8 /* InfoView.swift in Sources */,
 				E5096C1F26EA664200D7D2D8 /* SettingsView.swift in Sources */,
+				E5096C4826EC049800D7D2D8 /* WheelPickerView.swift in Sources */,
 				E5096C0326E90D7F00D7D2D8 /* ContentView.swift in Sources */,
 				E5096C1B26EA624900D7D2D8 /* hydrationModel.swift in Sources */,
 				E5096C1726E94A2D00D7D2D8 /* MainView.swift in Sources */,
+				E5096C4426EBE61E00D7D2D8 /* addHydrationView.swift in Sources */,
 				E5096C1926E9B50900D7D2D8 /* CircularProgressBarView.swift in Sources */,
 				E5096C0126E90D7F00D7D2D8 /* HydrationTrackerApp.swift in Sources */,
 				E5096C1D26EA625900D7D2D8 /* HydrationViewModel.swift in Sources */,
+				E5096C4626EC019B00D7D2D8 /* segmentedControl.swift in Sources */,
+				E5096C4226EBCBC200D7D2D8 /* intakeListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
